@@ -8,7 +8,7 @@
     --color-logo-footer:rgba(244, 244, 253, 1);
 
 }
-.list{
+.list,.projects-list,.list-button,.list-work,.list-item{
     list-style: none;
 }
 /* Cкидання стилів */
@@ -23,6 +23,10 @@ h1,h2,h3,p{
     }
     img{
         display: block;
+    }
+    .section{
+        padding-bottom: 120px;
+        padding-top: 120px;
     }
 body{
     background-color: var(--primary-white-color);
@@ -49,10 +53,19 @@ color:var(--color-logo-button);
   display: inline-block;
     display: flex;
 }
-.list .item-contacts{
+.list-cont{
+    display: inline;
+    display: flex;
+    margin-left: auto;
+}
+.list-contacts .item-contacts{
     display: flex;
     margin-right: auto;
     margin-left: 0;
+}
+.list-contacts{
+    display: flex;
+    margin-left: auto;
 }
 .site-nav{
 color: var(--color-title);
@@ -99,6 +112,8 @@ text-transform: uppercase;
 .contanair .page-header{
     display: flex;
     align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 /* h2 h3 */
@@ -109,19 +124,55 @@ text-transform: uppercase;
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
+.list-work{
+    display: flex;
+}
+.list-work .item:not(:last-child){
+    margin-right: 24px;
+}
+
 .advantage-list .title{
     color: var(--color-title);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
 }
-
+.list-advantage{
+    display: flex;
+    list-style: none;
+}
+.list-advantage .advantage-list{
+    width: 264px;
+}
+.list-advantage .advantage-list:not(:last-child){
+    margin-right: 24px;
+}
 .list-team .title{
 color: var(--color-title);
 font-weight: 500;
 font-size: 20px;
 line-height: 1.2px;
+background-color: var(--primary-white-color);
+margin-top: 32px;
+}
+.list-item .list-team{
+    margin-bottom: 32px;
+}
+.list-item{
+    display: flex;
+    background-color: #FFFF;
+    text-align: center;
+}
+.list-item .list-team:not(:last-child){
+    margin-right: 24px;
+}
+.position{
+    margin-top: 8px;
+}
+.section.team{
+background-color: #F4F4FD;
 }
 .list-projects .title{
     color: var(--color-title);
@@ -147,17 +198,37 @@ line-height: 1.2px;
     background-color: #404BBF;
     color:var(--primary-white-color);
 }
-/* hero */
-.section-hero{
-    background-color: var(--color-title);
+.list-button{
+    display: flex;
+    margin-top: 96px;
+    margin-bottom: 72px;
+    justify-content: center;
 }
+.list-button .item:not(:last-child){
+    margin-right: 24px;
+}
+/* hero */
+.section.hero{
+    background-color: var(--color-title);
+    width: 1440px;
+    height: 603px;
+    align-items: center;
+    padding-top: 192px;
+    padding-bottom: 192px;
+    
+}
+
 .section-title-hero{
     color: var(--primary-white-color);
     font-weight: 500;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
+    padding-bottom: 48px;
+    width: 492px;
+    margin: 0 auto;
 }
+
 .button-hero{
     font-family: inherit;
     color: var(--primary-white-color);
@@ -170,8 +241,9 @@ line-height: 1.2px;
     cursor: pointer;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.15);
-    display: inline-block;
+    display: flex;
     min-width: 170px;
+    margin: 0 auto;
 }
 .section-hero .button-hero:active{
     background-color:#404BBF;
@@ -185,12 +257,20 @@ line-height: 1.2px;
 .recommend{
     background-color: #2E2F42;
     color: var(--color-footer);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .recommend a{
     color:var(--color-logo-footer);
     font-size: 16px;
     line-height: 1.5;
+    justify-content: flex-start;
 }
+.text-footer{
+    width: 264px;
+    padding-top: 16px;
+}
+
 a{
     text-decoration: none;
 }
@@ -200,6 +280,33 @@ a{
 font-weight: 500;
 font-size: 20px;
 line-height: 24px;
+margin-top: 32px;
+}
+.projects-main p{
+    margin-top: 8px;
+}
+.projects-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-projects{
+    margin-right: 24px;
+    margin-bottom: 48px;
+}
+.list-projects:nth-child(3n){
+    margin-right: 0;
+}
+.list-projects:nth-last-child(-n+3){
+    margin-bottom: 0;
+}
+.projects-main{
+    border: 0.5px solid #F4F4FD;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+padding-left: 16px;
+padding-bottom: 32px;
+}
+.section-main{
+    padding-bottom: 120px;
 }
 /* невидимий заголовок */
 .visually-hidden{
@@ -214,13 +321,14 @@ overflow: hidden;
 }
 /* Контейнери */
 .contanair{
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 156px;
+    margin-right: 156px;
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    outline: 2px solid coral;
+    justify-content: center;
     /* background-color: aqua; */
 }
-
-
+.page-header{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
