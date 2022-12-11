@@ -33,8 +33,6 @@ body{
     color: var(--color-text);
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.02em;
-    width: 1440px;
-    height: 2642px;
 
 }
 /* хедер  */
@@ -42,6 +40,8 @@ body{
     color: var(--color-title);
     font-size: 16px;
     line-height: 1.5;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .contacts:active {
     color: var(--color-logo-button);
@@ -52,11 +52,13 @@ color:var(--color-logo-button);
 .list-contacts .list{
   display: inline-block;
     display: flex;
+
 }
 .list-cont{
     display: inline;
     display: flex;
     margin-left: auto;
+   
 }
 .list-contacts .item-contacts{
     display: flex;
@@ -85,6 +87,8 @@ display: inline-block;
 .list .item{
     margin-right: 40px;
     margin-left: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .link .site-nav:active{
     color: #404BBF;
@@ -108,12 +112,12 @@ text-transform: uppercase;
     color: var(--color-title);
     margin-left: 0px;
     margin-right: 77px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 .contanair .page-header{
     display: flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 /* h2 h3 */
@@ -132,12 +136,16 @@ text-transform: uppercase;
 .list-work .item:not(:last-child){
     margin-right: 24px;
 }
+.section-work{
+    padding-bottom: 120px;
+}
 
 .advantage-list .title{
     color: var(--color-title);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    margin-bottom: 8px;
 }
 .list-advantage{
     display: flex;
@@ -153,16 +161,25 @@ text-transform: uppercase;
 color: var(--color-title);
 font-weight: 500;
 font-size: 20px;
-line-height: 1.2px;
+line-height: 1.2;
 background-color: var(--primary-white-color);
-margin-top: 32px;
 }
 .list-item .list-team{
     margin-bottom: 32px;
 }
+.item-team{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #FFFFFF;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px;
+
+}
 .list-item{
     display: flex;
-    background-color: #FFFF;
+    background-color: #F4F4FD;
     text-align: center;
 }
 .list-item .list-team:not(:last-child){
@@ -200,9 +217,8 @@ background-color: #F4F4FD;
 }
 .list-button{
     display: flex;
-    margin-top: 96px;
-    margin-bottom: 72px;
     justify-content: center;
+    margin-bottom: 72px;
 }
 .list-button .item:not(:last-child){
     margin-right: 24px;
@@ -210,8 +226,6 @@ background-color: #F4F4FD;
 /* hero */
 .section.hero{
     background-color: var(--color-title);
-    width: 1440px;
-    height: 603px;
     align-items: center;
     padding-top: 192px;
     padding-bottom: 192px;
@@ -224,9 +238,9 @@ background-color: #F4F4FD;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
-    padding-bottom: 48px;
     width: 492px;
     margin: 0 auto;
+    margin-bottom: 48px;
 }
 
 .button-hero{
@@ -244,6 +258,11 @@ background-color: #F4F4FD;
     display: flex;
     min-width: 170px;
     margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: none;
 }
 .section-hero .button-hero:active{
     background-color:#404BBF;
@@ -268,7 +287,7 @@ background-color: #F4F4FD;
 }
 .text-footer{
     width: 264px;
-    padding-top: 16px;
+    margin-top: 16px;
 }
 
 a{
@@ -279,8 +298,7 @@ a{
     color: var(--color-title);
 font-weight: 500;
 font-size: 20px;
-line-height: 24px;
-margin-top: 32px;
+line-height: 1.33;
 }
 .projects-main p{
     margin-top: 8px;
@@ -304,9 +322,12 @@ margin-top: 32px;
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 padding-left: 16px;
 padding-bottom: 32px;
+padding-top: 32px;
+padding-right: 0 auto;
 }
 .section-main{
     padding-bottom: 120px;
+    padding-top: 120px;
 }
 /* невидимий заголовок */
 .visually-hidden{
@@ -321,8 +342,8 @@ overflow: hidden;
 }
 /* Контейнери */
 .contanair{
-    margin-left: 156px;
-    margin-right: 156px;
+    margin-right: 0 auto;
+margin-left: 0 auto;
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
